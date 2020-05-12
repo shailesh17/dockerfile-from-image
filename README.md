@@ -13,13 +13,13 @@ Docker image.
 To build the image from source (this step is not mandatory as the image also
 is on the Docker Hub):
 
-    git clone https://github.com/lukapeschke/dockerfile-from-image.git
+    git clone https://github.com/shailesh17/dockerfile-from-image.git
     cd dockerfile-from-image
-    docker build -t lukapeschke/dfa .
+    docker build -t shailesh17/dockerfile-from-image .
 
 To get a Dockerfile from an existing image:
 
-    docker run --rm -v '/var/run/docker.sock:/var/run/docker.sock' lukapeschke/dfa <IMAGE_ID>
+    docker run --rm -v '/var/run/docker.sock:/var/run/docker.sock' shailesh17/dockerfile-from-image <IMAGE_ID>
 
 ## Example with the official ubuntu image:
 
@@ -27,7 +27,7 @@ To get a Dockerfile from an existing image:
     REPOSITORY          TAG                 IMAGE ID            CREATED
     ubuntu              latest              c73a085dc378        12 days ago
 
-    $ docker run  --rm -v '/var/run/docker.sock:/var/run/docker.sock' lukapeschke/dfa c73a085dc378
+    $ docker run  --rm -v '/var/run/docker.sock:/var/run/docker.sock' shailesh17/dockerfile-from-image c73a085dc378
     FROM ubuntu:latest
     ADD file:cd937b840fff16e04e1f59d56f4424d08544b0bb8ac30d9804d25e28fb15ded3 in /
     RUN /bin/sh -c set -xe 							     \
